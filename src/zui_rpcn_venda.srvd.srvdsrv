@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - Vendas'
+define service Zui_rpcn_venda {
+  expose ZC_RPCN_VENDA as Vendas;
+}
