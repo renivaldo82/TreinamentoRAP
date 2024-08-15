@@ -1,4 +1,6 @@
 @EndUserText.label: 'Service Definition - Vendas'
 define service Zui_rpcn_venda {
-  expose ZC_RPCN_VENDA as Vendas;
+  expose ZC_RPCN_VENDA      as Vendas;
+  expose ZI_RPC_VIEW_AGENCY;
+  expose ZCE_RPCN_AGENCY;
 }

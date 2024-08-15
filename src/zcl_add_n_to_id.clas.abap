@@ -1,0 +1,27 @@
+CLASS zcl_add_n_to_id DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+    INTERFACES if_amdp_marker_hdb.
+
+    CLASS-METHODS execute FOR SCALAR FUNCTION zfx_add_n_to_id.
+
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_add_n_to_id IMPLEMENTATION.
+
+  METHOD execute BY DATABASE FUNCTION
+  FOR HDB LANGUAGE SQLSCRIPT
+  OPTIONS READ-ONLY.
+
+    result = parameter1_name + parameter2_name;
+
+  ENDMETHOD.
+
+ENDCLASS.
