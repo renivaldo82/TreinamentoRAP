@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_rpcn_ce_agency IMPLEMENTATION.
+CLASS ZCL_RPCN_CE_AGENCY IMPLEMENTATION.
 
 
   METHOD if_rap_query_provider~select.

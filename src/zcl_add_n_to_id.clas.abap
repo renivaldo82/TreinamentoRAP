@@ -14,7 +14,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_add_n_to_id IMPLEMENTATION.
+CLASS ZCL_ADD_N_TO_ID IMPLEMENTATION.
+
 
   METHOD execute BY DATABASE FUNCTION
   FOR HDB LANGUAGE SQLSCRIPT
@@ -23,5 +24,4 @@ CLASS zcl_add_n_to_id IMPLEMENTATION.
     result = parameter1_name + parameter2_name;
 
   ENDMETHOD.
-
 ENDCLASS.

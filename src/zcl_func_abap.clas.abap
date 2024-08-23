@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_func_abap IMPLEMENTATION.
+CLASS ZCL_FUNC_ABAP IMPLEMENTATION.
 
 
   METHOD if_sadl_exit_calc_element_read~calculate.
