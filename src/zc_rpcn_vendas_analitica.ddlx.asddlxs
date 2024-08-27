@@ -1,0 +1,49 @@
+@Metadata.layer: #CUSTOMER
+
+@UI.headerInfo: { typeName: 'Venda Analitica', typeNamePlural: 'Vendas Analiticas' }
+
+@UI.chart: [
+    {
+        qualifier: 'ChartDefault',
+        chartType: #LINE,
+        description: 'Ano/Mes',
+        dimensions: [ 'MesAno' ],
+        measures: [ 'TotalCompra' ],
+        dimensionAttributes: [{ dimension: 'MesAno', role: #CATEGORY }],
+        measureAttributes: [{ measure: 'TotalCompra', role: #AXIS_1, asDataPoint: true }]
+    }
+]
+@UI.presentationVariant: [
+    {
+        qualifier: 'Default', visualizations: [{ type: #AS_CHART,  qualifier: 'ChartDefault' }]
+    }
+]
+annotate entity zc_rpcn_vendas_analitica with
+{
+  @UI.lineItem: [{ position: 10 }]
+  @EndUserText.label: 'Venda Id'
+  VendaId;
+
+  @UI.lineItem: [{ position: 20 }]
+  @EndUserText.label: 'Data da Venda'
+  DataVenda;
+
+  @EndUserText.label: 'Ano/Mes'
+  @UI.dataPoint:{ title: 'Ano/Mes' }
+  MesAno;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.selectionField: [{ position: 10 }]
+  @UI.dataPoint:{ title: 'Vendedor' }
+  @EndUserText.label: 'Vendedor'
+  Vendedor;
+
+  @UI.lineItem: [{ position: 50 }]
+  @EndUserText.label: 'Resumo'
+  Resumo;
+
+  @UI.lineItem: [{ position: 60 }]
+  @EndUserText.label: 'Total da Venda'
+  TotalCompra;
+
+}

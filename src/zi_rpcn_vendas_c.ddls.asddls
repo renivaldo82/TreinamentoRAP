@@ -7,7 +7,7 @@ define root view entity zi_rpcn_vendas_c
 {
   key VendaId,
       DataVenda,
-      substring(DataVenda, 1, 6) as MesAno,
+      concat(concat(substring(DataVenda, 1, 4), '/'), substring(DataVenda, 5, 2))  as MesAno,
       Vendedor,
       case
         when sum(_itens.ValorTotal) > cast( '300000.00' as abap.dec( 12, 4 ) )
